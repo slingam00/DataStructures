@@ -1,3 +1,5 @@
+#This is a stack implementation using lists
+
 class Stack: #start of the Stack class
 
     def __init__(self): #initializing the stack

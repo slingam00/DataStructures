@@ -8,7 +8,7 @@ class Node:
     
 class LinkedList:
 
-    def __init__(self):
+    def __init__(self): #first initializing the head
         self.head = None
 
     def insert_at_beginning(self, data): #insertion at the beginning of the linked list
@@ -21,7 +21,7 @@ class LinkedList:
             self.head = newNode
         else:
             last = self.head
-            while(last.next):
+            while(last.next): #once last.next is null, it moves on from the while loop and adds the new node
                 last = last.next
             last.next = newNode
 
@@ -32,15 +32,15 @@ class LinkedList:
         newNode.next = middle.next
         middle.next = newNode
 
-    def remove_first_node(self, data):
+    def remove_first_node(self, data): #removing the first node
         if self.data is self.head:
             self.head = self.head.next
 
-    def remove_last_node(self, data):
+    def remove_last_node(self, data): #removing the last node
         if self.data.next is None:
             self.data = None
 
-    def remove_in_between(self, data):
+    def remove_in_between(self, data): #removing a node in the middle of the linked list
         if Node.next == self.data:
             Node.next = self.data.next
             self.data = None
